@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0AMkRS2GDEEVbsWWd8SbTab2GNgzizkEwtrFIjzYiLw=",
+  "Source": "CoffeeShopManagementSystem.Api",
+  "BasePath": "_content/CoffeeShopManagementSystem.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
