@@ -12,6 +12,8 @@ namespace CoffeeShopManagementSystem.Domain.IService
     {
        Task<List<ProductDto>> GetProduct();
         Task<User> GetUserByEmail(string name, string password);
+        bool AddProduct(ProductDto product);
+
 
     }
 }

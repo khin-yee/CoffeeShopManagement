@@ -36,7 +36,10 @@ namespace CoffeeShopManagementSystem.Service
                 throw ex;
             }
         }
-       
+        public bool AddProduct(ProductDto product)
+        {
+            return  _productrepo.AddProduct(product);
+        }
         public async Task<User> GetUserByEmail(string name,string password)
         {
             return await _productrepo.GetUserByEmail(name, password);

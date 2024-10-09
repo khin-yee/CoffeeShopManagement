@@ -36,6 +36,7 @@ namespace CoffeeShopManagementSystem.Domain.Repo
         {
             var product = _mapper.Map<Product>(productDto);
             var response =  _context.Add(product);
+            _context.SaveChanges();
             return true;
         }
         public async Task<User>GetUserByEmail(string name, string password)

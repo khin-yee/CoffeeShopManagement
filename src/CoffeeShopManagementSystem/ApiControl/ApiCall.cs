@@ -1,5 +1,6 @@
 ﻿using CoffeeShopManagementSystem.Domain.Model;
 using CoffeeShopManagementSystem.Domain.Model.DTO;
+using Newtonsoft.Json;
 
 namespace CoffeeShopManagementSystem.ApiControl
 {
@@ -14,6 +15,13 @@ namespace CoffeeShopManagementSystem.ApiControl
         {
             var res = await _http.SendAsync<ProductDto>("https://localhost:7055/Product", "100", null, HttpMethod.Get);
             return res;
+        }
+        public bool AddProduct(ProductDto product)
+        {
+            //public async Task<T?> SendJsonAsync<T>(string requestJson, string path, string timeout, HttpMethod httpMethod)
+
+            var res =  _http.SendJsonAsync<bool>(JsonConvert.SerializeObject(product),"https://localhost:7055/AddProduct", "100",  HttpMethod.Post);            
+            return true;
         }
         public async Task<User> GetAccountAuth(string name, string password)
         {

@@ -26,5 +26,12 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         {
             return await  _service.GetUserByEmail(name, password);
         }
+
+        [HttpPost("/AddProduct")]
+
+        public bool AddProduct(ProductDto product)
+        {
+            return _service.AddProduct(product);
+        }
     }
 }

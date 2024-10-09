@@ -1,7 +1,9 @@
 ﻿@page "/AddProduct"
+@using CoffeeShopManagementSystem.ApiControl
 @using CoffeeShopManagementSystem.Domain.Model.DTO
 @rendermode InteractiveServer
-
+@inject IApiCall apicall
+@inject NavigationManager navigationManager
 <h5 class="p-2">Add Product</h5>
 <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
@@ -35,8 +37,23 @@
 
 @code {
     private ProductDto model = new ProductDto();
-    public Task OnValidSubmit(EditContext context)
+    // public Task OnValidSubmit()
+    // {
+    //     var user = await apicall.GetAccountAuth(Model.Name, Model.Password);
+    //     re
+    // }
+    private async Task OnValidSubmit()
     {
-        throw new Exception();
+        ProductDto product = new ProductDto
+            {
+                Name = model.Name,
+                Quantity = model.Quantity,
+                Amount  = model.Amount,
+                Category = model.Category
+            };
+        var user =  apicall.AddProduct(product);
+        navigationManager.NavigateTo("/Product");
+
     }
+
 }
