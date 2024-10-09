@@ -1,0 +1,82 @@
+﻿@page "/Login"
+@using CoffeeShopManagementSystem.ApiControl
+@using CoffeeShopManagementSystem.Domain.Model
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@inject IApiCall apicall
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager navigationManager
+@rendermode InteractiveServer
+
+<div class="row">
+    <MudCard Outlined="true" class="col-lg-4 offset-lg-4 pt-4  pb-4 border">
+        <MudCardContent>
+            <EditForm Model="@Model" FormName="LoginForm">
+                <DataAnnotationsValidator />
+                <div class="mb-3 text-center flex-column">
+                    <img src="/favicon.png" style="max-height:5rem;" />
+
+                </div>
+                <div class="mb-3 text-center flex-column">
+                    <MudAvatar Color="Color.Primary">L</MudAvatar>
+                    <MudAvatar Color="Color.Secondary">o</MudAvatar>
+                    <MudAvatar Color="Color.Tertiary">g</MudAvatar>
+                    <MudAvatar Color="Color.Secondary">i</MudAvatar>
+                    <MudAvatar Color="Color.Primary">n</MudAvatar>
+                </div>
+                <div class="mb-3">
+                    <MudTextField @bind-Value="@Model.Name" Label="UserName" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <ValidationMessage For="()=>Model.Name" />
+                </div>
+                <div class="mb-3">
+                    <MudTextField @bind-Value="@Model.Password" Label="Password" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <ValidationMessage For="()=>Model.Password" />
+                </div>
+                <div class="mb-3 text-center">
+                    <span class=" text-danger">@errorMessage</span>
+                </div>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Filled" Color="Color.Dark" OnClick="@Authenticate" FullWidth="true">Login</MudButton>
+                </MudCardActions>
+                <div class="mb-3  mx-2 ">  If you don't have account, <a class="fw-bolder" href="/AddUser">Click Here</a> to Create Account'</div>
+
+            </EditForm>
+        </MudCardContent>
+    </MudCard>
+</div>
+@inject IHttpContextAccessor HttpContextAccessor
+
+@code {
+    [SupplyParameterFromForm]
+    public User Model { get; set; } = new();
+    private string? errorMessage;
+    private async Task Authenticate()
+    {
+        var user = await apicall.GetAccountAuth(Model.Name, Model.Password);
+        if (user == null || user.Password != Model.Password)
+        {
+            errorMessage = "Invalid User Name or Password";
+            return;
+        }
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, Model.Name),
+               new Claim(ClaimTypes.Role, Model.Name),
+
+        };
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+
+        try
+        {
+            await HttpContextAccessor.HttpContext.SignInAsync(principal);
+            navigationManager.NavigateTo("/");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error during authentication: {ex.Message}";
+            // Consider logging the error here
+        }
+    }
+}

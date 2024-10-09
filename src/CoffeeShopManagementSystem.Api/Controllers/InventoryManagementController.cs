@@ -1,4 +1,5 @@
 ﻿using CoffeeShopManagementSystem.Domain.IService;
+using CoffeeShopManagementSystem.Domain.Model;
 using CoffeeShopManagementSystem.Domain.Model.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,15 +10,21 @@ namespace CoffeeShopManagementSystem.Api.Controllers
     [ApiController]
     public class InventoryManagementController : ControllerBase
     {
-        private readonly IInventoryManagementService _service;
-        public InventoryManagementController (IInventoryManagementService service)
+        private readonly IProductService _service;
+        public InventoryManagementController (IProductService service)
         {
             _service = service;
         }
-        [HttpGet]
+        [HttpGet("/Product")]
         public async Task<List<ProductDto>> GetProduct()
         {
             return await _service.GetProduct();
+        }
+        [HttpPost("/AccValidate")]
+
+        public async Task<User> GetUserByEmail([FromForm] string name, [FromForm] string password)
+        {
+            return await  _service.GetUserByEmail(name, password);
         }
     }
 }

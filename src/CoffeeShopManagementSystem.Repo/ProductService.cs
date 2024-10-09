@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopManagementSystem.Service
 {
-    public class InventoryMangementService:IInventoryManagementService
+    public class ProductService:IProductService
     {
-        private readonly IProductRepo _productrepo;
+        private readonly IRepo _productrepo;
         private readonly IMapper _mapper;
 
-        public InventoryMangementService(IProductRepo productrepo, IMapper mapper)
+        public ProductService(IRepo productrepo, IMapper mapper)
         {
             _productrepo = productrepo;
             _mapper = mapper;
@@ -35,6 +35,11 @@ namespace CoffeeShopManagementSystem.Service
             {
                 throw ex;
             }
+        }
+       
+        public async Task<User> GetUserByEmail(string name,string password)
+        {
+            return await _productrepo.GetUserByEmail(name, password);
         }
     }
 }

@@ -1,0 +1,42 @@
+﻿@page "/AddProduct"
+@using CoffeeShopManagementSystem.Domain.Model.DTO
+@rendermode InteractiveServer
+
+<h5 class="p-2">Add Product</h5>
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudCard>
+                <MudCardContent>
+                   
+                    <MudTextField ShrinkLabel @bind-Value="model.Name" Label="Name" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Quantity" Label="Quantity" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Amount" Label="Amount" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Category" Label="Category" Variant="Variant.Text" class="p-2"></MudTextField>
+
+
+
+
+
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/Product">
+                        Cancel
+                    </MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="m-2">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+</EditForm>
+
+
+@code {
+    private ProductDto model = new ProductDto();
+    public Task OnValidSubmit(EditContext context)
+    {
+        throw new Exception();
+    }
+}

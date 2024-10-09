@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(c => c.AddProfile<MappingProfile>(), typeof(Program));
 builder.Services.AddRepo();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("connectionstring")));
-builder.Services.AddScoped<IInventoryManagementService, InventoryMangementService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

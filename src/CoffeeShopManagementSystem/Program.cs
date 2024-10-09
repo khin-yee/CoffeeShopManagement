@@ -1,9 +1,34 @@
+using CoffeeShopManagementSystem.ApiControl;
 using CoffeeShopManagementSystem.Components;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents();
+builder.Services.AddMudServices();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<IHttpClientService, HttpClientService>();
+builder.Services.AddScoped<IApiCall, ApiCall>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
+    options =>
+    {
+        options.Cookie.Name = "auth_token";
+        options.LoginPath = "/login";
+        options.Cookie.MaxAge = TimeSpan.FromMinutes(30);
+        options.AccessDeniedPath = "/access-denied";
+    }
+    );
+builder.Services.AddAuthorization();
+builder.Services.AddCascadingAuthenticationState();
+builder.Services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
+
+builder.Services.AddAuthenticationCore();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,7 +43,9 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
-
-app.MapRazorComponents<App>();
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapRazorComponents<App>()
+        .AddInteractiveServerRenderMode();
 
 app.Run();

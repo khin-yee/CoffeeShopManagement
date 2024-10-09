@@ -13,7 +13,7 @@ namespace CoffeeShopManagementSystem.Domain
     {
         public static IServiceCollection AddRepo(this IServiceCollection services)
         {
-            services.AddTransient<IProductRepo, ProductRepo>();
+            services.AddTransient<IRepo.IRepo, Repository>();
             return services;
         }
     }
