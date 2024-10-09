@@ -1,27 +1,27 @@
-/src/BlazorApi/.vs
-/src/BlazorApi/.vs/*
-/src/BlazorApi/*/bin
-/src/BlazorApi/*/obj
-/src/BlazorApi/TempData
-/src/BlazorApi/log
-/src/BlazorApi/aws-logger-errors.txt
+/src/CoffeeShopManagementSystem/.vs
+/src/CoffeeShopManagementSystem/.vs/*
+/src/CoffeeShopManagementSystem/*/bin
+/src/CoffeeShopManagementSystem/*/obj
+/src/CoffeeShopManagementSystem/TempData
+/src/CoffeeShopManagementSystem/log
+/src/CoffeeShopManagementSystem/aws-logger-errors.txt
 
-/src/BlazorApi.Api/.vs
-/src/BlazorApi.Api/.vs/*
-/src/BlazorApi.Api/*/bin
-/src/BlazorApi.Api/*/obj
-/src/BlazorApi.Api/aws-logger-errors.txt
-/src/BlazorApi.Api/log
+/src/CoffeeShopManagementSystem.Api/.vs
+/src/CoffeeShopManagementSystem.Api/.vs/*
+/src/CoffeeShopManagementSystem.Api/*/bin
+/src/CoffeeShopManagementSystem.Api/*/obj
+/src/CoffeeShopManagementSystem.Api/aws-logger-errors.txt
+/src/CoffeeShopManagementSystem.Api/log
 
-/src/BlazorApi.Repository/.vs
-/src/BlazorApi.Repository/.vs/*
-/src/BlazorApi.Repository/*/bin
-/src/BlazorApi.Repository/*/obj
+/src/CoffeeShopManagementSystem.Domain/.vs
+/src/CoffeeShopManagementSystem.Domain/.vs/*
+/src/CoffeeShopManagementSystem.Domain/*/bin
+/src/CoffeeShopManagementSystem.Domain/*/obj
 
-/src/BlazorApi.Service/.vs
-/src/BlazorApi.Service/.vs/*
-/src/BlazorApi.Service/*/bin
-/src/BlazorApi.Service/*/obj
+/src/CoffeeShopManagementSystem.Repo/.vs
+/src/CoffeeShopManagementSystem.Repo/.vs/*
+/src/CoffeeShopManagementSystem.Repo/*/bin
+/src/CoffeeShopManagementSystem.Repo/*/obj
 
 
 /src/*/bin
