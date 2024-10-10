@@ -7,6 +7,7 @@ namespace CoffeeShopManagementSystem.ApiControl
     {
        Task<List<ProductDto>> GetProduct();
        bool AddProduct(ProductDto product);
+        Task<Response> DeleteProduct(ProductDto product);
 
        Task<User> GetAccountAuth(string username, string password);
 

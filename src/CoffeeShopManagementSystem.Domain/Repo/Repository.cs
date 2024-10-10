@@ -39,6 +39,17 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             _context.SaveChanges();
             return true;
         }
+
+        public Response DeleteProduct(ProductDto productDto)
+        {
+            Response res = new Response();
+            var product =_mapper.Map<Product>(productDto);
+            var response =  _context.Remove(product);
+            _context.SaveChanges();
+            res.ErrorCode = "00";
+            res.ErrorMessage = "Success";
+            return  res;
+        }
         public async Task<User>GetUserByEmail(string name, string password)
         {
             try

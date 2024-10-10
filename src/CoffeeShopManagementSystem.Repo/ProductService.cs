@@ -44,5 +44,9 @@ namespace CoffeeShopManagementSystem.Service
         {
             return await _productrepo.GetUserByEmail(name, password);
         }
+        public Response DeleteProduct(ProductDto productDto)
+        {
+            return  _productrepo.DeleteProduct(productDto);
+        }
     }
 }

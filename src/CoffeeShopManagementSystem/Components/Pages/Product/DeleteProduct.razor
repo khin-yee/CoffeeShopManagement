@@ -1,17 +1,17 @@
-﻿@page "/AddProduct"
+﻿@page "/DeleteProduct"
 @using CoffeeShopManagementSystem.ApiControl
 @using CoffeeShopManagementSystem.Domain.Model.DTO
-@rendermode InteractiveServer
 @inject IApiCall apicall
-@inject NavigationManager navigationManager
-<h5 class="p-2">Add Product</h5>
+@inject NavigationManager Navigation
+
+<h3>DeleteProduct</h3>
 <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
     <MudGrid>
         <MudItem xs="12" sm="7">
             <MudCard>
                 <MudCardContent>
-                   
+
                     <MudTextField ShrinkLabel @bind-Value="model.Name" Label="Name" Variant="Variant.Text" class="p-2"></MudTextField>
                     <MudTextField ShrinkLabel @bind-Value="model.Quantity" Label="Quantity" Variant="Variant.Text" class="p-2"></MudTextField>
                     <MudTextField ShrinkLabel @bind-Value="model.Amount" Label="Amount" Variant="Variant.Text" class="p-2"></MudTextField>
@@ -44,11 +44,11 @@
             {
                 Name = model.Name,
                 Quantity = model.Quantity,
-                Amount  = model.Amount,
+                Amount = model.Amount,
                 Category = model.Category
             };
-        var user =  apicall.AddProduct(product);
-        navigationManager.NavigateTo("/Product");
+        var user = apicall.AddProduct(product);
+        Navigation.NavigateTo("/Product");
 
     }
 

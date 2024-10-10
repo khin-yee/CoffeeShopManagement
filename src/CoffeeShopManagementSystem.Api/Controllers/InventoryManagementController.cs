@@ -33,5 +33,12 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         {
             return _service.AddProduct(product);
         }
+
+        [HttpPost("/DeleteProduct")]
+        public Response DeleteProduct(ProductDto product)
+        {
+            return _service.DeleteProduct(product);
+        }
+
     }
 }
