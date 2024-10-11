@@ -14,5 +14,6 @@ namespace CoffeeShopManagementSystem.Domain.Model.DTO
         public int Quality { get; set; }
         public string OrderDate { get; set; }
 
+        public DateTime CreatedAt { get; set; }
     }
 }

@@ -63,27 +63,53 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             }
         }
 
-        public  Response CreateOrder(OrderDto orderdto)
+        public Response CreateOrder(OrderDto orderdto)
         {
             Response res = new Response()
             {
                 ErrorCode = "00",
                 ErrorMessage = "Success"
             };
+
             try
             {
+                // Map the OrderDto to an Order entity
                 var order = _mapper.Map<Order>(orderdto);
-                var response =  _context.Add(order);
-                _context.SaveChanges();
 
-                
+                // Find the product in the context using the product name
+                var product = _context.Product.FirstOrDefault(p => p.Name == orderdto.ProductName);
+
+                // Check if the product exists
+                if (product == null)
+                {
+                    res.ErrorCode = "02"; // Error code for product not found
+                    res.ErrorMessage = "Product not found.";
+                    return res;
+                }
+
+                // Check if there is enough quantity available
+                if (product.Quantity < 1) // Assuming Quantity is an int field
+                {
+                    res.ErrorCode = "03"; // Error code for insufficient quantity
+                    res.ErrorMessage = "Insufficient product quantity.";
+                    return res;
+                }
+
+                // Decrease the quantity of the product
+                product.Quantity--;
+
+                // Add the order to the context
+                _context.Add(order);
+
+                // Save changes to the database
+                _context.SaveChanges();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 res.ErrorCode = "01";
                 res.ErrorMessage = ex.Message;
-                
             }
+
             return res;
         }
 

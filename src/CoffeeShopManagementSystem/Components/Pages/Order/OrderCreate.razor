@@ -4,6 +4,7 @@
 @rendermode InteractiveServer
 @inject IApiCall apicall
 @inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
 
 <h5 class="p-2">Add Order</h5>
 
@@ -72,7 +73,28 @@
                 OrderDate = model.OrderDate
             };
 
-        var res = await apicall.AddOrder(order);
-        navigationManager.NavigateTo("/Order");
+        var response = await apicall.AddOrder(order);
+        if (response.ErrorMessage == "Success") // Check if the operation was successful
+        {
+            await jsRuntime.InvokeVoidAsync("Swal.fire", new
+            {
+                title = "Success!",
+                text = "Order  added successfully!",
+                icon = "success",
+                confirmButtonText = "OK"
+            });
+            navigationManager.NavigateTo("/Order"); // Navigate to Product page
+        }
+        else
+        {
+            await jsRuntime.InvokeVoidAsync("Swal.fire", new
+            {
+                title = "Error!",
+                text = "Error adding product: " + response,
+                icon = "error",
+                confirmButtonText = "OK"
+            });
+            navigationManager.NavigateTo("/AddOrder");
+        }
     }
 }

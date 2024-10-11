@@ -7,9 +7,11 @@ namespace CoffeeShopManagementSystem.ApiControl
     public class ApiCall:IApiCall
     {
         private readonly IHttpClientService _http;
-        public ApiCall(IHttpClientService http)
+        private readonly IHttpClientService _shttp;
+        public ApiCall(IHttpClientService http, IHttpClientService shttp)
         {
             _http = http;
+            _shttp = shttp;
         }
         public async Task<List<ProductDto>> GetProduct()
         {
@@ -32,7 +34,7 @@ namespace CoffeeShopManagementSystem.ApiControl
         {
             //public async Task<T?> SendJsonAsync<T>(string requestJson, string path, string timeout, HttpMethod httpMethod)
 
-            var res = _http.SendJsonAsync<Response>(JsonConvert.SerializeObject(order), "https://localhost:7055/AddOrder", "100", HttpMethod.Post);
+            var res = _shttp.SendJsonAsync<Response>(JsonConvert.SerializeObject(order), "https://localhost:7055/AddOrder", "100", HttpMethod.Post);
             return res;
         }
         public Task<Response> DeleteProduct(ProductDto product)

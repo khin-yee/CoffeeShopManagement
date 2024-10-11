@@ -35,6 +35,8 @@
         <PropertyColumn Property="x => x.ProductName" Title="ProductName" />
         <PropertyColumn Property="x => x.Quality" Title="Quality" />
         <PropertyColumn Property="x => x.OrderDate" Title="OrderDate" />
+        <PropertyColumn Property="x => x.CreatedAt" Title="OrderCreateTime" />
+
         
         <!-- Action Column with Delete and Edit Buttons -->
         <TemplateColumn Title="Action">
@@ -53,6 +55,7 @@
 </MudDataGrid>
 
 @code {
+    private DateTime? _date = DateTime.Today;
     private List<OrderDto>? order;
     private bool _isInitialized;
     protected override async Task OnInitializedAsync()

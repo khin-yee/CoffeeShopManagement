@@ -1,4 +1,16 @@
 ﻿@inherits LayoutComponentBase
+@* Required *@
+<MudThemeProvider />
+<MudPopoverProvider />
+
+@* Needed for dialogs *@
+<MudDialogProvider />
+
+@* Needed for snackbars *@
+<MudSnackbarProvider />
+
+@* Include the actual Snackbar component *@
+<MudSnackbar />
 
 <div class="page">
     <div class="sidebar">
@@ -15,12 +27,4 @@
         </article>
     </main>
 </div>
-@* Required *@
-<MudThemeProvider />
-<MudPopoverProvider />
 
-@* Needed for dialogs *@
-<MudDialogProvider />
-
-@* Needed for snackbars *@
-<MudSnackbarProvider />
