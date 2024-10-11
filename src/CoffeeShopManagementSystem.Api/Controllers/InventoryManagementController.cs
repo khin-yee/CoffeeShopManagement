@@ -3,7 +3,6 @@ using CoffeeShopManagementSystem.Domain.Model;
 using CoffeeShopManagementSystem.Domain.Model.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 namespace CoffeeShopManagementSystem.Api.Controllers
 {
     [Route("api/[controller]")]
@@ -43,6 +42,11 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         public Response AddOrder(OrderDto order)
         {
             return _service.CreateOrder(order);
+        }
+        [HttpGet("/Order")]
+        public async Task<List<OrderDto>> GetOrder()
+        {
+            return await _service.GetOrder();
         }
     }
 }

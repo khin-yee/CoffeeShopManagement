@@ -13,7 +13,7 @@ namespace CoffeeShopManagementSystem.Domain.Model
         public string PhoneNumber { get; set; }
         public string ProductName { get; set; }
         public int Quality { get; set; }
-        public DateTime OrderDate { get; set; }
+        public string OrderDate { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }

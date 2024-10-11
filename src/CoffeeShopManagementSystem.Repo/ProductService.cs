@@ -53,5 +53,20 @@ namespace CoffeeShopManagementSystem.Service
         {
             return _productrepo.CreateOrder(order);
         }
+        public async Task<List<OrderDto>> GetOrder()
+        {
+            var res = await _productrepo.GetOrder();
+            try
+            {
+
+                var response = _mapper.Map<List<OrderDto>>(res);
+                return response;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

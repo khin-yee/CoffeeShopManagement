@@ -12,7 +12,7 @@ namespace CoffeeShopManagementSystem.Domain.Model.DTO
         public string PhoneNumber { get; set; }
         public string ProductName { get; set; }
         public int Quality { get; set; }
-        public DateTime OrderDate { get; set; }
+        public string OrderDate { get; set; }
 
     }
 }

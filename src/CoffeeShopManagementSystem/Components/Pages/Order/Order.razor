@@ -1,0 +1,90 @@
+﻿@page "/Order"
+@using CoffeeShopManagementSystem.ApiControl
+@using CoffeeShopManagementSystem.Domain.Model
+@using CoffeeShopManagementSystem.Domain.Model.DTO
+@inject NavigationManager Navigation
+@inject IApiCall apicall
+<style>
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-bottom: 10px; /* Optional: adds space between the button and the table */
+    }
+
+    .filterbtnz:hover {
+        background-color: grey;
+        color: black;
+    }
+</style>
+<h3>Order List</h3>
+<div class="button-container">
+    <NavLink class="btn btn-outline-dark mx-2" href="/AddOrder">Order</NavLink>
+
+    <div class="filterbtnz btn btn-dark" onclick="CallJsFunction()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5919 9.13863C12.7359 9.13863 13.6666 10.0646 13.6666 11.2026C13.6666 12.3406 12.7359 13.2666 11.5919 13.2666C10.4473 13.2666 9.51593 12.3406 9.51593 11.2026C9.51593 10.0646 10.4473 9.13863 11.5919 9.13863ZM11.5919 10.1386C10.9986 10.1386 10.5159 10.616 10.5159 11.2026C10.5159 11.79 10.9986 12.2666 11.5919 12.2666C12.1846 12.2666 12.6666 11.79 12.6666 11.2026C12.6666 10.616 12.1846 10.1386 11.5919 10.1386ZM6.7202 10.7285C6.9962 10.7285 7.2202 10.9525 7.2202 11.2285C7.2202 11.5045 6.9962 11.7285 6.7202 11.7285H2.51953C2.24353 11.7285 2.01953 11.5045 2.01953 11.2285C2.01953 10.9525 2.24353 10.7285 2.51953 10.7285H6.7202ZM4.07533 2.66663C5.22 2.66663 6.15067 3.59329 6.15067 4.73129C6.15067 5.86929 5.22 6.79463 4.07533 6.79463C2.93133 6.79463 2 5.86929 2 4.73129C2 3.59329 2.93133 2.66663 4.07533 2.66663ZM4.07533 3.66663C3.48267 3.66663 3 4.14396 3 4.73129C3 5.31796 3.48267 5.79463 4.07533 5.79463C4.66867 5.79463 5.15067 5.31796 5.15067 4.73129C5.15067 4.14396 4.66867 3.66663 4.07533 3.66663ZM12.7941 4.26689C13.0701 4.26689 13.2941 4.49089 13.2941 4.76689C13.2941 5.04289 13.0701 5.26689 12.7941 5.26689H8.59407C8.31807 5.26689 8.09407 5.04289 8.09407 4.76689C8.09407 4.49089 8.31807 4.26689 8.59407 4.26689H12.7941Z" fill="white" />
+        </svg>
+        <span>Filter</span>
+    </div>
+</div>
+<MudDataGrid Items="@order" Striped="true" Hover="true">
+    <Columns>
+        <PropertyColumn Property="x => x.CustomerName" Title="CustomerName" />
+        <PropertyColumn Property="x => x.PhoneNumber" Title="PhoneNumber" />
+        <PropertyColumn Property="x => x.ProductName" Title="ProductName" />
+        <PropertyColumn Property="x => x.Quality" Title="Quality" />
+        <PropertyColumn Property="x => x.OrderDate" Title="OrderDate" />
+        
+        <!-- Action Column with Delete and Edit Buttons -->
+        <TemplateColumn Title="Action">
+            <CellTemplate Context="cellContext">
+                <!-- Use cellContext.Item to access the ProductDto -->
+                <button type="button" onclick="Delete()">
+                    <MudIconButton Size="@Size.Medium"
+                                   Icon="@Icons.Material.Outlined.Delete" />
+                </button>
+                <MudIconButton Size="@Size.Medium"
+                               Icon="@Icons.Material.Outlined.Edit"
+                               OnClick="@cellContext.Actions.StartEditingItemAsync" />
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+</MudDataGrid>
+
+@code {
+    private List<OrderDto>? order;
+    private bool _isInitialized;
+    protected override async Task OnInitializedAsync()
+    {
+        if (!_isInitialized)
+        {
+            try
+            {
+                order = await apicall.GetOrder();
+                _isInitialized = true; // Set the flag after initialization
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error fetching products: {ex.Message}");
+            }
+        }
+    }
+    // private bool Delete()
+    // {
+    //     return true;
+    // }
+
+    // // Ensure this method returns a Task
+    // private async Task DeleteProductAsync(ProductDto productToDelete)
+    // {
+    //     // Call API to delete the product
+    //     var response = await apicall.DeleteProduct(productToDelete);
+
+    //     if (response.ErrorCode == "00")
+    //     {
+    //         // Remove the product from the local list after successful deletion
+    //         product?.Remove(productToDelete);
+    //     }
+    // }
+}

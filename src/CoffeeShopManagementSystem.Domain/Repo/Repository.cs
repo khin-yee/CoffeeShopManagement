@@ -86,5 +86,17 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             }
             return res;
         }
+
+        public async Task<List<Order>> GetOrder()
+        {
+            try
+            {
+                return await _context.Order.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

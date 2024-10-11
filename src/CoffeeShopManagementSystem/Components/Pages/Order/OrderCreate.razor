@@ -1,0 +1,78 @@
+﻿@page "/AddOrder"
+@using CoffeeShopManagementSystem.ApiControl
+@using CoffeeShopManagementSystem.Domain.Model.DTO
+@rendermode InteractiveServer
+@inject IApiCall apicall
+@inject NavigationManager navigationManager
+
+<h5 class="p-2">Add Order</h5>
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudCard>
+                <MudCardContent>
+
+                    <MudTextField ShrinkLabel @bind-Value="model.CustomerName" Label="Customer Name" Variant="Variant.Text" class="p-2"></MudTextField>
+
+                    <label for="productName">Product Name</label>
+                    <select id="productName" @bind="model.ProductName" class="form-control">
+                        <option value="">--Select Product--</option>
+                        @foreach (var product in productList)
+                        {
+                            <option value="@product">@product</option>
+                        }
+                    </select>
+
+                    <MudTextField ShrinkLabel @bind-Value="model.PhoneNumber" Label="Phone Number" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Quality" Label="Quality" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.OrderDate" Label="Order Date" Variant="Variant.Text" class="p-2"></MudTextField>
+
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/Product">
+                        Cancel
+                    </MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="m-2">Order</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</EditForm>
+
+@code {
+    private DateTime? _date = DateTime.Today;
+    private OrderDto model = new OrderDto();
+    private List<string> productList = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var products = await apicall.GetProduct();
+            productList = products.Select(p => p.Name).ToList();
+            StateHasChanged();  // Force the UI to update after the data is loaded
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching products: {ex.Message}");
+        }
+    }
+
+    private async Task OnValidSubmit()
+    {
+        OrderDto order = new OrderDto
+            {
+                CustomerName = model.CustomerName,
+                PhoneNumber = model.PhoneNumber,
+                ProductName = model.ProductName,
+                Quality = model.Quality,
+                OrderDate = model.OrderDate
+            };
+
+        var res = await apicall.AddOrder(order);
+        navigationManager.NavigateTo("/Order");
+    }
+}

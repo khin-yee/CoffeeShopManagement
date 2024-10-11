@@ -11,6 +11,7 @@ namespace CoffeeShopManagementSystem.Domain.IService
     public interface IProductService
     {
        Task<List<ProductDto>> GetProduct();
+        Task<List<OrderDto>> GetOrder();
         Task<User> GetUserByEmail(string name, string password);
         bool AddProduct(ProductDto product);
         Response DeleteProduct(ProductDto productDto);

@@ -6,7 +6,11 @@ namespace CoffeeShopManagementSystem.ApiControl
     public interface IApiCall
     {
        Task<List<ProductDto>> GetProduct();
+        Task<List<OrderDto>> GetOrder();
+
        bool AddProduct(ProductDto product);
+        Task<Response> AddOrder(OrderDto order);
+
         Task<Response> DeleteProduct(ProductDto product);
 
        Task<User> GetAccountAuth(string username, string password);

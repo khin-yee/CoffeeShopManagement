@@ -15,6 +15,7 @@ namespace CoffeeShopManagementSystem.Domain.IRepo
         Task<User> GetUserByEmail(string name, string password);
         Response DeleteProduct(ProductDto productDto);
         Response CreateOrder(OrderDto orderdto);
+        Task<List<Order>> GetOrder();
 
     }
 }
