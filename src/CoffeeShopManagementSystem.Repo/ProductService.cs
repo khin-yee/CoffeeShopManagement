@@ -48,5 +48,10 @@ namespace CoffeeShopManagementSystem.Service
         {
             return  _productrepo.DeleteProduct(productDto);
         }
+
+        public Response CreateOrder(OrderDto order)
+        {
+            return _productrepo.CreateOrder(order);
+        }
     }
 }

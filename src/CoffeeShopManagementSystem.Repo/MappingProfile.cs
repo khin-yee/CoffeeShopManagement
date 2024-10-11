@@ -15,6 +15,8 @@ namespace CoffeeShopManagementSystem.Service
         {
             CreateMap<Product, ProductDto>();
             CreateMap<ProductDto, Product>();
+            CreateMap<Order,OrderDto>();
+            CreateMap<OrderDto, Order>();
 
         }
     }

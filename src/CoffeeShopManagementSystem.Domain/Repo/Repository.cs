@@ -3,6 +3,7 @@ using CoffeeShopManagementSystem.Domain.IRepo;
 using CoffeeShopManagementSystem.Domain.Model;
 using CoffeeShopManagementSystem.Domain.Model.DTO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -60,6 +61,30 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             {
                 throw ex;
             }
+        }
+
+        public  Response CreateOrder(OrderDto orderdto)
+        {
+            Response res = new Response()
+            {
+                ErrorCode = "00",
+                ErrorMessage = "Success"
+            };
+            try
+            {
+                var order = _mapper.Map<Order>(orderdto);
+                var response =  _context.Add(order);
+                _context.SaveChanges();
+
+                
+            }
+            catch(Exception ex)
+            {
+                res.ErrorCode = "01";
+                res.ErrorMessage = ex.Message;
+                
+            }
+            return res;
         }
     }
 }

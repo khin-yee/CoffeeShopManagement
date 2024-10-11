@@ -11,10 +11,10 @@ namespace CoffeeShopManagementSystem.Domain.IRepo
     public  interface IRepo
     {
         bool AddProduct(ProductDto productDto);
-
         Task<List<Product>> GetProduct();
         Task<User> GetUserByEmail(string name, string password);
         Response DeleteProduct(ProductDto productDto);
+        Response CreateOrder(OrderDto orderdto);
 
     }
 }
