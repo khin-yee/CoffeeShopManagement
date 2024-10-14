@@ -1,4 +1,9 @@
 .page {
+    background-image: url('/Images/coffee2.png'); /* Image */
+    background-repeat: no-repeat; /* No repeat for image */
+    background-attachment: fixed;
+    min-height: 100vh;
+    min-width: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6,6 +11,7 @@
 
 main {
     flex: 1;
+   
 }
 
 .sidebar {

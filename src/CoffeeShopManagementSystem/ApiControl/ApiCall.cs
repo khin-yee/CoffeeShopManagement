@@ -23,6 +23,12 @@ namespace CoffeeShopManagementSystem.ApiControl
             var res = await _http.SendAsync<OrderDto>("https://localhost:7055/Order", "100", null, HttpMethod.Get);
             return res;
         }
+
+        public async Task<List<IngredientDTO>> GetIngredient()
+        {
+            var res = await _http.SendAsync<IngredientDTO>("https://localhost:7055/Ingredient", "100", null, HttpMethod.Get);
+            return res;
+        }
         public bool AddProduct(ProductDto product)
         {
             //public async Task<T?> SendJsonAsync<T>(string requestJson, string path, string timeout, HttpMethod httpMethod)

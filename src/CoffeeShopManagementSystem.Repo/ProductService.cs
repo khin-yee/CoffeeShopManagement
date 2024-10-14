@@ -68,5 +68,20 @@ namespace CoffeeShopManagementSystem.Service
                 throw ex;
             }
         }
+        public async Task<List<IngredientDTO>> GetIngredietns()
+        {
+            var res = await _productrepo.GetIngredients();
+            try
+            {
+
+                var response = _mapper.Map<List<IngredientDTO>>(res);
+                return response;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             _context.SaveChanges();
             return true;
         }
-
+        
         public Response DeleteProduct(ProductDto productDto)
         {
             Response res = new Response();
@@ -124,5 +124,18 @@ namespace CoffeeShopManagementSystem.Domain.Repo
                 throw;
             }
         }
+
+        public async Task<List<Ingredients>> GetIngredients()
+        {
+            try
+            {
+                return await _context.Ingredient.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

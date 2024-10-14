@@ -48,5 +48,10 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         {
             return await _service.GetOrder();
         }
+        [HttpGet("/Ingredient")]
+        public async Task<List<IngredientDTO>> GetIngredient()
+        {
+            return await _service.GetIngredietns();
+        }
     }
 }

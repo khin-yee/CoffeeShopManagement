@@ -16,6 +16,7 @@ namespace CoffeeShopManagementSystem.Domain.IService
         bool AddProduct(ProductDto product);
         Response DeleteProduct(ProductDto productDto);
         Response CreateOrder(OrderDto order);
+        Task<List<IngredientDTO>> GetIngredietns();
 
 
     }

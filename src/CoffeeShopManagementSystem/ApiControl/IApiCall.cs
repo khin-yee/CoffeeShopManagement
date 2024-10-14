@@ -7,8 +7,9 @@ namespace CoffeeShopManagementSystem.ApiControl
     {
        Task<List<ProductDto>> GetProduct();
         Task<List<OrderDto>> GetOrder();
+        Task<List<IngredientDTO>> GetIngredient();
 
-       bool AddProduct(ProductDto product);
+        bool AddProduct(ProductDto product);
         Task<Response> AddOrder(OrderDto order);
 
         Task<Response> DeleteProduct(ProductDto product);
