@@ -37,13 +37,7 @@
         <TemplateColumn Title="Action">
             <CellTemplate Context="cellContext">
                 <!-- Use cellContext.Item to access the ProductDto -->
-                <button type="button" onclick="Delete()">
-                    <MudIconButton Size="@Size.Medium"
-                                   Icon="@Icons.Material.Outlined.Delete" />
-                </button>
-                <MudIconButton Size="@Size.Medium"
-                               Icon="@Icons.Material.Outlined.Edit"
-                               OnClick="@cellContext.Actions.StartEditingItemAsync" />
+             
             </CellTemplate>
         </TemplateColumn>
     </Columns>
@@ -67,9 +61,10 @@
             }
         }
     }
-    private bool Delete()
+    private Task DeleteProdduct()
     {
-        return true;
+        // Placeholder logic for deletion, you can put your actual delete logic here
+        return Task.CompletedTask; // Since there's no async operation, return a completed task
     }
 
     // Ensure this method returns a Task

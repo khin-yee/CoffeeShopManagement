@@ -51,7 +51,12 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         [HttpGet("/Ingredient")]
         public async Task<List<IngredientDTO>> GetIngredient()
         {
-            return await _service.GetIngredietns();
+            return await _service.GetIngredient();
+        }
+        [HttpPost("/AddIngredient")]
+        public Response AddIngredient(IngredientDTO ingredient)
+        {
+            return _service.CreateIngredient(ingredient);
         }
     }
 }

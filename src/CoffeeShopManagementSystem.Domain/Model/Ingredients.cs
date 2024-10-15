@@ -8,13 +8,12 @@ namespace CoffeeShopManagementSystem.Domain.Model
 {
     public  class Ingredients
     {
-        public int Id { get; set; }
+       public int Id { get; set; }
+
         public string Name { get; set; }
-
         public int Quality { get; set; }
-
         public string Unit { get; set; }
-
         public string Amount { get; set; }
+
     }
 }

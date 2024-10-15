@@ -68,7 +68,7 @@ namespace CoffeeShopManagementSystem.Service
                 throw ex;
             }
         }
-        public async Task<List<IngredientDTO>> GetIngredietns()
+        public async Task<List<IngredientDTO>> GetIngredient()
         {
             var res = await _productrepo.GetIngredients();
             try
@@ -82,6 +82,10 @@ namespace CoffeeShopManagementSystem.Service
             {
                 throw ex;
             }
+        }
+        public Response CreateIngredient(IngredientDTO ingredients)
+        {
+            return _productrepo.CreateIngredient(ingredients);
         }
     }
 }

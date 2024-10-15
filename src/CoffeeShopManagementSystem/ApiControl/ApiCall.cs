@@ -43,6 +43,15 @@ namespace CoffeeShopManagementSystem.ApiControl
             var res = _shttp.SendJsonAsync<Response>(JsonConvert.SerializeObject(order), "https://localhost:7055/AddOrder", "100", HttpMethod.Post);
             return res;
         }
+
+        public Task<Response> AddIngredient(IngredientDTO ingredient)
+        {
+            //public async Task<T?> SendJsonAsync<T>(string requestJson, string path, string timeout, HttpMethod httpMethod)
+
+            var res = _shttp.SendJsonAsync<Response>(JsonConvert.SerializeObject(ingredient), "https://localhost:7055/AddIngredient", "100", HttpMethod.Post);
+            return res;
+        }
+
         public Task<Response> DeleteProduct(ProductDto product)
         {
             var res =  _http.SendJsonAsync<Response>(JsonConvert.SerializeObject(product), "https://localhost:7055/Deleteroduct", "100", HttpMethod.Post);

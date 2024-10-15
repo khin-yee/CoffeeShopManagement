@@ -96,8 +96,10 @@ namespace CoffeeShopManagementSystem.Domain.Repo
                 }
 
                 // Decrease the quantity of the product
-                product.Quantity--;
-
+                for (int i = 1; i <= orderdto.Quality; i++)
+                {
+                    product.Quantity--;
+                }
                 // Add the order to the context
                 _context.Add(order);
 
@@ -129,12 +131,39 @@ namespace CoffeeShopManagementSystem.Domain.Repo
         {
             try
             {
-                return await _context.Ingredient.ToListAsync();
+                var ingredients = await _context.Ingredients
+                .ToListAsync();
+                return ingredients;
             }
             catch (Exception ex)
             {
                 throw;
             }
+        }
+        public Response CreateIngredient(IngredientDTO ingredientdto)
+        {
+            Response res = new Response()
+            {
+                ErrorCode = "00",
+                ErrorMessage = "Success"
+            };
+
+            try
+            {
+                // Map the OrderDto to an Order entity
+                var ingredient = _mapper.Map<Ingredients>(ingredientdto);
+
+                _context.Add(ingredient);
+
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                res.ErrorCode = "01";
+                res.ErrorMessage = ex.Message;
+            }
+
+            return res;
         }
 
     }

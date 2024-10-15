@@ -1,0 +1,83 @@
+﻿@page "/CreateIngredient"
+@using CoffeeShopManagementSystem.ApiControl
+@using CoffeeShopManagementSystem.Domain.Model.DTO
+@rendermode InteractiveServer
+@inject IApiCall apicall
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+<h5 class="p-2">Add Order</h5>
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudCard>
+                <MudCardContent>
+
+                    <MudTextField ShrinkLabel @bind-Value="model.Name" Label="Ingredient Name" Variant="Variant.Text" class="p-2"></MudTextField>              
+                    <MudTextField ShrinkLabel @bind-Value="model.Quality" Label="Quality" Variant="Variant.Text" class="p-2"></MudTextField>
+
+                   <label for="productName">Unit</label>
+                    <select id="Unit" @bind="model.Unit" class="form-control">
+                        <option value="" >Select Unit</option>
+                        <option value="kg">kg</option>
+                        <option value="g">g</option>
+                        <option value="liter">liter</option>
+                        <option value="unit">unit</option>
+                    </select>
+
+
+                    <MudTextField ShrinkLabel @bind-Value="model.Amount" Label="Amount" Variant="Variant.Text" class="p-2"></MudTextField>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/Ingredient">
+                        Cancel
+                    </MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="m-2">Add</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</EditForm>
+
+@code {
+    private DateTime? _date = DateTime.Today;
+    private IngredientDTO model = new IngredientDTO();
+    private List<string> productList = new List<string>();
+
+    private async Task OnValidSubmit()
+    {
+        IngredientDTO ingredient = new IngredientDTO
+            {
+                Name = model.Name,
+                Quality = model.Quality,
+                Unit = model.Unit,
+                Amount = model.Amount
+            };
+
+        var response = await apicall.AddIngredient(ingredient);
+        if (response.ErrorMessage == "Success") // Check if the operation was successful
+        {
+            await jsRuntime.InvokeVoidAsync("Swal.fire", new
+            {
+                title = "Success!",
+                text = "Order  added successfully!",
+                icon = "success",
+                confirmButtonText = "OK"
+            });
+            navigationManager.NavigateTo("/Ingredient"); // Navigate to Product page
+        }
+        else
+        {
+            await jsRuntime.InvokeVoidAsync("Swal.fire", new
+            {
+                title = "Error!",
+                text = "Error adding product: " + response,
+                icon = "error",
+                confirmButtonText = "OK"
+            });
+            navigationManager.NavigateTo("/AddIngredient");
+        }
+    }
+}

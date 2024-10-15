@@ -16,5 +16,7 @@ namespace CoffeeShopManagementSystem.ApiControl
 
        Task<User> GetAccountAuth(string username, string password);
 
+       Task<Response> AddIngredient(IngredientDTO ingredient);
+
     }
 }
