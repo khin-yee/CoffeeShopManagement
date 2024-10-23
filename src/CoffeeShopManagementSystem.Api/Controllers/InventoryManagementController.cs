@@ -34,9 +34,9 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         }
 
         [HttpPost("/DeleteProduct")]
-        public Response DeleteProduct(ProductDto product)
+        public Task<Response> DeleteProduct([FromForm] string name)
         {
-            return _service.DeleteProduct(product);
+            return _service.DeleteProductByEmail(name);
         }
         [HttpPost("/AddOrder")]
         public Response AddOrder(OrderDto order)

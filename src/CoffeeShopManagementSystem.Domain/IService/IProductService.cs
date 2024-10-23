@@ -17,6 +17,7 @@ namespace CoffeeShopManagementSystem.Domain.IService
         Response DeleteProduct(ProductDto productDto);
         Response CreateOrder(OrderDto order);
         Task<List<IngredientDTO>> GetIngredient();
+        Task<Response> DeleteProductByEmail(string name);
         Response CreateIngredient(IngredientDTO ingredients);
 
     }

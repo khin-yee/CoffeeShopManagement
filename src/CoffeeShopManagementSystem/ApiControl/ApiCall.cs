@@ -1,6 +1,7 @@
 ﻿using CoffeeShopManagementSystem.Domain.Model;
 using CoffeeShopManagementSystem.Domain.Model.DTO;
 using Newtonsoft.Json;
+using System.Xml.Linq;
 
 namespace CoffeeShopManagementSystem.ApiControl
 {
@@ -52,10 +53,20 @@ namespace CoffeeShopManagementSystem.ApiControl
             return res;
         }
 
-        public Task<Response> DeleteProduct(ProductDto product)
+        public async Task<Response> DeleteProduct(string productname)
         {
-            var res =  _http.SendJsonAsync<Response>(JsonConvert.SerializeObject(product), "https://localhost:7055/Deleteroduct", "100", HttpMethod.Post);
+            var parameters = new List<KeyValuePair<string, string>>
+            {
+                                    new KeyValuePair<string, string>("Name",productname),
+                                   
+                                };
+
+            var encodedContent = new FormUrlEncodedContent(parameters);
+
+            var res = await _http.SendOneAsync<Response>("https://localhost:7055/DeleteProduct", "100", encodedContent, HttpMethod.Post);
             return res;
+            //var res =  _http.SendJsonAsync<Response>(JsonConvert.SerializeObject(product), "https://localhost:7055/DeleteProduct", "100", HttpMethod.Post);
+            //return res;
         }
         public async Task<User> GetAccountAuth(string name, string password)
         {

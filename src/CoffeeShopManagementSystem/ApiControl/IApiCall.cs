@@ -12,7 +12,7 @@ namespace CoffeeShopManagementSystem.ApiControl
         bool AddProduct(ProductDto product);
         Task<Response> AddOrder(OrderDto order);
 
-        Task<Response> DeleteProduct(ProductDto product);
+        Task<Response> DeleteProduct(string productname);
 
        Task<User> GetAccountAuth(string username, string password);
 

@@ -62,7 +62,27 @@ namespace CoffeeShopManagementSystem.Domain.Repo
                 throw ex;
             }
         }
+        public async Task<Response>DeleteProductByName(string name)
+        {
+            Response res = new Response()
+            {
+                ErrorCode = "00",
+                ErrorMessage = "Success"
+            };
+            try
+            {
+                var product = await _context.Product.FirstOrDefaultAsync(x => x.Name == name );
+                _context.Product.Remove(product);
+                _context.SaveChanges();
 
+            }
+            catch(Exception ex)
+            {
+                res.ErrorCode = "01";
+                res.ErrorMessage = ex.Message;
+            }
+            return res;
+        }
         public Response CreateOrder(OrderDto orderdto)
         {
             Response res = new Response()

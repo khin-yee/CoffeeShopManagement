@@ -33,11 +33,15 @@
         <PropertyColumn Property="x => x.Quantity" Title="Quantity" />
         <PropertyColumn Property="x => x.Category" Title="Category" />
 
-        <!-- Action Column with Delete and Edit Buttons -->
         <TemplateColumn Title="Action">
             <CellTemplate Context="cellContext">
-                <!-- Use cellContext.Item to access the ProductDto -->
-             
+                @{
+                    var deleteUrl = $"/DeleteProduct/{cellContext.Item.Name}"; // Construct the URL here
+                }
+
+                <NavLink href="@deleteUrl">
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete" />
+                </NavLink>
             </CellTemplate>
         </TemplateColumn>
     </Columns>
@@ -68,15 +72,15 @@
     }
 
     // Ensure this method returns a Task
-    private async Task DeleteProductAsync(ProductDto productToDelete)
-    {
-        // Call API to delete the product
-        var response = await apicall.DeleteProduct(productToDelete);
+    // private async Task DeleteProductAsync(ProductDto productToDelete)
+    // {
+    //     // Call API to delete the product
+    //     var response = await apicall.DeleteProduct(productToDelete);
 
-        if (response.ErrorCode == "00")
-        {
-            // Remove the product from the local list after successful deletion
-            product?.Remove(productToDelete);
-        }
-    }
+    //     if (response.ErrorCode == "00")
+    //     {
+    //         // Remove the product from the local list after successful deletion
+    //         product?.Remove(productToDelete);
+    //     }
+    // }
 }

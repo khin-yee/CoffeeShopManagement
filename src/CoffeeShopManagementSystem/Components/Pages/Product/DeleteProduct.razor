@@ -1,55 +1,62 @@
-﻿@page "/DeleteProduct"
+﻿@page "/DeleteProduct/{Name}"
 @using CoffeeShopManagementSystem.ApiControl
-@using CoffeeShopManagementSystem.Domain.Model.DTO
 @inject IApiCall apicall
-@inject NavigationManager Navigation
+@inject IJSRuntime jsRuntime
+@inject NavigationManager navigationManager
+@inject IDialogService DialogService
+@rendermode InteractiveServer
+@* <h3>Delete Product</h3>
 
-<h3>DeleteProduct</h3>
-<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
-    <DataAnnotationsValidator />
-    <MudGrid>
-        <MudItem xs="12" sm="7">
-            <MudCard>
-                <MudCardContent>
+<p>Are you sure you want to delete the product: <strong>@Name</strong>?</p>
+<button class="btn btn-dark">Delete</button>
+ *@
 
-                    <MudTextField ShrinkLabel @bind-Value="model.Name" Label="Name" Variant="Variant.Text" class="p-2"></MudTextField>
-                    <MudTextField ShrinkLabel @bind-Value="model.Quantity" Label="Quantity" Variant="Variant.Text" class="p-2"></MudTextField>
-                    <MudTextField ShrinkLabel @bind-Value="model.Amount" Label="Amount" Variant="Variant.Text" class="p-2"></MudTextField>
-                    <MudTextField ShrinkLabel @bind-Value="model.Category" Label="Category" Variant="Variant.Text" class="p-2"></MudTextField>
-
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/Product">
-                        Cancel
-                    </MudButton>
-                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="m-2">Register</MudButton>
-                </MudCardActions>
-            </MudCard>
-        </MudItem>
-    </MudGrid>
-
-</EditForm>
+<MudCard Style="border: 1px solid black;">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6">Delete Product</MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+      
+        <MudText Typo="Typo.body2">Are you sure to delete Product : @Name</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudButton Variant="Variant.Outlined" @onclick="OnValidSubmit" Color="Color.Dark">Delete</MudButton>
+    </MudCardActions>
+</MudCard>
 
 
 @code {
-    private ProductDto model = new ProductDto();
-    // public Task OnValidSubmit()
-    // {
-    //     var user = await apicall.GetAccountAuth(Model.Name, Model.Password);
-    //     re
-    // }
+    [Parameter] public string  Name { get; set; }  // Ensure 'id' matches the route parameter
+
     private async Task OnValidSubmit()
     {
-        ProductDto product = new ProductDto
-            {
-                Name = model.Name,
-                Quantity = model.Quantity,
-                Amount = model.Amount,
-                Category = model.Category
-            };
-        var user = apicall.AddProduct(product);
-        Navigation.NavigateTo("/Product");
 
+        var response = await apicall.DeleteProduct(Name);
+        if (response.ErrorCode == "00")
+        {
+            await jsRuntime.InvokeVoidAsync("Swal.fire", new
+            {
+                title = "Success!",
+                text = "Product Deleted successfully!",
+                icon = "success",
+                confirmButtonText = "OK"
+            });
+        }
+        else
+        {
+            await jsRuntime.InvokeVoidAsync("Swal.fire", new
+            {
+                title = "Error!",
+                text = response.ErrorMessage,
+                icon = "error",
+                confirmButtonText = "OK"
+            });
+        }
+        navigationManager.NavigateTo("/Product"); // Navigate to Product pag
     }
+}
+
 
 }

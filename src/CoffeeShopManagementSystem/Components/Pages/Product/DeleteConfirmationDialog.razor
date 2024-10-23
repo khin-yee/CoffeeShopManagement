@@ -1,0 +1,26 @@
+﻿@inherits ComponentBase
+
+<MudDialog>
+    <MudDialogTitle>Confirm Deletion</MudDialogTitle>
+    <MudDialogContent>
+        <p>Are you sure you want to delete the product?</p>
+    </MudDialogContent>
+    <MudDialogActions>
+        <MudButton OnClick="CloseDialog" Color="Color.Secondary">Cancel</MudButton>
+        <MudButton OnClick="ConfirmDeletion" Color="Color.Primary">Confirm</MudButton>
+    </MudDialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    private void CloseDialog()
+    {
+        MudDialog.Cancel();
+    }
+
+    private void ConfirmDeletion()
+    {
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+}
