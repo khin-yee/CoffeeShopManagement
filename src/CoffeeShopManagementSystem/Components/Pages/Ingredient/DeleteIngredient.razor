@@ -1,4 +1,4 @@
-﻿@page "/DeleteProduct/{Name}"
+﻿@page "/DeleteIngredient/{Name}"
 @using CoffeeShopManagementSystem.ApiControl
 @inject IApiCall apicall
 @inject IJSRuntime jsRuntime
@@ -18,7 +18,7 @@
         </CardHeaderContent>
     </MudCardHeader>
     <MudCardContent>
-      
+
         <MudText Typo="Typo.body2">Are you sure to delete Product : @Name</MudText>
     </MudCardContent>
     <MudCardActions>
@@ -29,18 +29,18 @@
 
 
 @code {
-    [Parameter] public string  Name { get; set; }  // Ensure 'id' matches the route parameter
+    [Parameter] public string Name { get; set; }  // Ensure 'id' matches the route parameter
 
     private async Task OnValidSubmit()
     {
 
-        var response = await apicall.DeleteProduct(Name);
+        var response = await apicall.DeleteIngredient(Name);
         if (response.ErrorCode == "00")
         {
             await jsRuntime.InvokeVoidAsync("Swal.fire", new
             {
                 title = "Success!",
-                text = "Product Deleted successfully!",
+                text = "Ingredient Deleted successfully!",
                 icon = "success",
                 confirmButtonText = "OK"
             });
@@ -55,11 +55,11 @@
                 confirmButtonText = "OK"
             });
         }
-        navigationManager.NavigateTo("/Product"); // Navigate to Product pag
+        navigationManager.NavigateTo("/Ingredient"); 
     }
     private async Task OnCancelSubmit()
     {
-        navigationManager.NavigateTo("/Product");
+        navigationManager.NavigateTo("/Ingredient");
     }
 }
 

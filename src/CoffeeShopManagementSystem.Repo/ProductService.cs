@@ -48,6 +48,10 @@ namespace CoffeeShopManagementSystem.Service
         {
             return await _productrepo.DeleteProductByName(name);
         }
+        public async Task<Response> DeleteIngredientByName(string name)
+        {
+            return await _productrepo.DeleteIngredientByName(name);
+        }
         public Response DeleteProduct(ProductDto productDto)
         {
             return  _productrepo.DeleteProduct(productDto);
@@ -90,6 +94,11 @@ namespace CoffeeShopManagementSystem.Service
         public Response CreateIngredient(IngredientDTO ingredients)
         {
             return _productrepo.CreateIngredient(ingredients);
+        }
+
+        public async Task<Response> DeleteOrderByName(string customername,string prouctname)
+        {
+            return await _productrepo.DeleteOrderByName(customername,prouctname);
         }
     }
 }

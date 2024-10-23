@@ -58,5 +58,15 @@ namespace CoffeeShopManagementSystem.Api.Controllers
         {
             return _service.CreateIngredient(ingredient);
         }
+        [HttpPost("/DeleteOrder")]
+        public Task<Response> DeleteOrder([FromForm] string customername, [FromForm] string productname)
+        {
+            return _service.DeleteOrderByName(customername,productname);
+        }
+        [HttpPost("/DeleteIngredient")]
+        public Task<Response> DeleteIngredient([FromForm] string name)
+        {
+            return _service.DeleteIngredientByName(name);
+        }
     }
 }

@@ -13,10 +13,13 @@ namespace CoffeeShopManagementSystem.ApiControl
         Task<Response> AddOrder(OrderDto order);
 
         Task<Response> DeleteProduct(string productname);
+        Task<Response> DeleteIngredient(string name);
 
-       Task<User> GetAccountAuth(string username, string password);
+        Task<User> GetAccountAuth(string username, string password);
 
        Task<Response> AddIngredient(IngredientDTO ingredient);
+        Task<Response> DeleteOrder(string customername, string productname);
+
 
     }
 }

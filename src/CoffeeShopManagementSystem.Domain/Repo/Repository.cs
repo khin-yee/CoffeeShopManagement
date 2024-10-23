@@ -62,6 +62,17 @@ namespace CoffeeShopManagementSystem.Domain.Repo
                 throw ex;
             }
         }
+        //public async Task<User> GetIngredient(string name, string password)
+        //{
+        //    try
+        //    {
+        //        return await _context.User.FirstOrDefaultAsync(x => x.Name == name && x.Password == password);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
         public async Task<Response>DeleteProductByName(string name)
         {
             Response res = new Response()
@@ -77,6 +88,27 @@ namespace CoffeeShopManagementSystem.Domain.Repo
 
             }
             catch(Exception ex)
+            {
+                res.ErrorCode = "01";
+                res.ErrorMessage = ex.Message;
+            }
+            return res;
+        }
+        public async Task<Response> DeleteIngredientByName(string name)
+        {
+            Response res = new Response()
+            {
+                ErrorCode = "00",
+                ErrorMessage = "Success"
+            };
+            try
+            {
+                var ingredient = await _context.Ingredients.FirstOrDefaultAsync(x => x.Name == name);
+                _context.Ingredients.Remove(ingredient);
+                _context.SaveChanges();
+
+            }
+            catch (Exception ex)
             {
                 res.ErrorCode = "01";
                 res.ErrorMessage = ex.Message;
@@ -183,6 +215,27 @@ namespace CoffeeShopManagementSystem.Domain.Repo
                 res.ErrorMessage = ex.Message;
             }
 
+            return res;
+        }
+        public async Task<Response> DeleteOrderByName(string customername,string productname)
+        {
+            Response res = new Response()
+            {
+                ErrorCode = "00",
+                ErrorMessage = "Success"
+            };
+            try
+            {
+                var order = await _context.Order.FirstOrDefaultAsync(x => x.CustomerName==customername && x.ProductName==productname);
+                _context.Order.Remove(order);
+                _context.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                res.ErrorCode = "01";
+                res.ErrorMessage = ex.Message;
+            }
             return res;
         }
 

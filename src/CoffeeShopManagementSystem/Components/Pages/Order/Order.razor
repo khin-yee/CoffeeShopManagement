@@ -37,18 +37,16 @@
         <PropertyColumn Property="x => x.OrderDate" Title="OrderDate" />
         <PropertyColumn Property="x => x.CreatedAt" Title="OrderCreateTime" />
 
-        
-        <!-- Action Column with Delete and Edit Buttons -->
+
         <TemplateColumn Title="Action">
             <CellTemplate Context="cellContext">
-                <!-- Use cellContext.Item to access the ProductDto -->
-                <button type="button" onclick="Delete()">
-                    <MudIconButton Size="@Size.Medium"
-                                   Icon="@Icons.Material.Outlined.Delete" />
-                </button>
-                <MudIconButton Size="@Size.Medium"
-                               Icon="@Icons.Material.Outlined.Edit"
-                               OnClick="@cellContext.Actions.StartEditingItemAsync" />
+                @{
+                    var deleteUrl = $"/DeleteOrder/{cellContext.Item.CustomerName}/{cellContext.Item.ProductName}"; // Construct the URL here
+                }
+
+                <NavLink href="@deleteUrl">
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete" />
+                </NavLink>
             </CellTemplate>
         </TemplateColumn>
     </Columns>

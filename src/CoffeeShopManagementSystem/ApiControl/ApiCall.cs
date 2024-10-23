@@ -68,6 +68,20 @@ namespace CoffeeShopManagementSystem.ApiControl
             //var res =  _http.SendJsonAsync<Response>(JsonConvert.SerializeObject(product), "https://localhost:7055/DeleteProduct", "100", HttpMethod.Post);
             //return res;
         }
+        public async Task<Response> DeleteIngredient(string name)
+        {
+            var parameters = new List<KeyValuePair<string, string>>
+            {
+                                    new KeyValuePair<string, string>("Name",name),
+
+                                };
+
+            var encodedContent = new FormUrlEncodedContent(parameters);
+
+            var res = await _http.SendOneAsync<Response>("https://localhost:7055/DeleteIngredient", "100", encodedContent, HttpMethod.Post);
+            return res;
+            
+        }
         public async Task<User> GetAccountAuth(string name, string password)
         {
             var parameters = new List<KeyValuePair<string, string>>
@@ -80,6 +94,19 @@ namespace CoffeeShopManagementSystem.ApiControl
 
             var res = await _http.SendOneAsync<User>("https://localhost:7055/AccValidate", "100", encodedContent, HttpMethod.Post);
             return res;
+        }
+        public async Task<Response> DeleteOrder(string customername,string productname)
+        {
+            var parameters = new List<KeyValuePair<string, string>>
+            {
+                                    new KeyValuePair<string, string>("customername",customername),
+                                     new KeyValuePair<string, string>("productname",productname),
+                                };
+
+            var encodedContent = new FormUrlEncodedContent(parameters);
+
+            var res = await _http.SendOneAsync<Response>("https://localhost:7055/DeleteOrder", "100", encodedContent, HttpMethod.Post);
+            return res!;
         }
     }
 }

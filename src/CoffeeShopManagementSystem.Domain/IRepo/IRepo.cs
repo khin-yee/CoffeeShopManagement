@@ -19,6 +19,8 @@ namespace CoffeeShopManagementSystem.Domain.IRepo
         Task<List<Ingredients>> GetIngredients();
         Response CreateIngredient(IngredientDTO ingredientdto);
         Task<Response> DeleteProductByName(string name);
+        Task<Response> DeleteOrderByName(string customername, string productname);
+        Task<Response> DeleteIngredientByName(string name);
 
 
     }
