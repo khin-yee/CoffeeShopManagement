@@ -26,7 +26,8 @@ namespace CoffeeShopManagementSystem.Domain.Repo
         {
             try
             {
-                return await _context.Product.ToListAsync();
+                var res = await _context.Product.OrderByDescending(p => p.Id).ToListAsync();
+                return res;
             }
             catch (Exception ex)
             {

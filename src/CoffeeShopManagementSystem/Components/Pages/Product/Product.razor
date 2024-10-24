@@ -2,8 +2,13 @@
 @using CoffeeShopManagementSystem.ApiControl
 @using CoffeeShopManagementSystem.Domain.Model
 @using CoffeeShopManagementSystem.Domain.Model.DTO
+@using System.Text.Json
 @inject NavigationManager Navigation
 @inject IApiCall apicall
+@rendermode InteractiveServer
+@inject IJSRuntime jsRuntime
+@inject NavigationManager navigationManager
+
 <style>
     .button-container {
         display: flex;
@@ -11,13 +16,34 @@
         margin-right: 20px;
         margin-bottom: 10px; /* Optional: adds space between the button and the table */
     }
-
+    h3{
+        justify-content: flex-end;
+    }
     .filterbtnz:hover {
         background-color: grey;
-        : black;
     }
+    MudTh{
+       text-align: center;
+    }
+
+    th {
+        color:white;
+    }
+
+    /* Target the table data cells */
+    td {
+        text-align: center;
+    }
+
+    .mud-dark-table th,
+    .mud-dark-table td {
+        color: white;
+    }
+    /* .product-table th, .product-table td {
+        text-align: center;
+    } */
 </style>
-<h3>Product List</h3>
+<h3 style="justify-content:right">Product List</h3>
 <div class="button-container">
     <NavLink class="btn btn-dark filterbtnz mx-2" href="/AddProduct">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="black">
@@ -27,7 +53,7 @@
         <span>Add Product</span>
     </NavLink>
 </div>
-<MudDataGrid Items="@product" Striped="true" Hover="true" Style="border: 1px solid grey; border-radius: 5px; padding: 10px;">
+@* <MudDataGrid Items="@product" Striped="true" Hover="true" Style="border: 1px solid grey; border-radius: 5px; padding: 10px;">
     <Columns>
         <PropertyColumn Property="x => x.Name" Title="Name" />
         <PropertyColumn Property="x => x.Amount" Title="Amount" />
@@ -47,23 +73,139 @@
         </TemplateColumn>
     </Columns>
 </MudDataGrid>
+ *@
+<MudTable @ref="@_table" Items="@product" Dense="true" Striped="true" RowsPerPage="5" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+    <HeaderContent>
+        <MudTh >Name</MudTh>
+        <MudTh>Amount</MudTh>
+        <MudTh>Quantity</MudTh>
+        <MudTh>Category</MudTh>
+        <MudTh>Action</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Nr" >@context.Name</MudTd>
+        <MudTd DataLabel="Sign">@context.Amount</MudTd>
+        <MudTd DataLabel="Name" >@context.Quantity</MudTd>
+        <MudTd DataLabel="Position">@context.Category</MudTd>
+        <MudTd DataLabel="Action">
+           
+
+            <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete" OnClick="@(() => ConfirmDeleteProduct(context.Name))" />
+
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <div style="display: flex; justify-content: safe center;">
+            <MudPagination SelectedChanged="PageChanged"
+                           Count="@((_table.GetFilteredItemsCount() + _table.RowsPerPage - 1) / _table.RowsPerPage)"
+                           Class="pa-4"
+                           Color="Color.Dark" />
+        </div>
+    </PagerContent>
+</MudTable>
 
 @code {
+    private MudTable<ProductDto> _table;
     private List<ProductDto>? product;
-    private bool _isInitialized;
+    private bool _isInitialized=false;
     protected override async Task OnInitializedAsync()
     {
-        if (!_isInitialized)
+        // Load or reload data every time the page is visited
+        await LoadDataAsync();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        try
         {
-            try
+            product = await apicall.GetProduct();
+            _isInitialized = true; // Set the flag after initialization
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching products: {ex.Message}");
+        }
+        StateHasChanged();
+    }
+
+    private void PageChanged(int i)
+    {
+        _table.NavigateTo(i - 1);
+    }
+
+
+
+    private async Task ConfirmDeleteProduct(string productName)
+    {
+        try
+        {
+            // Show confirmation dialog
+            var result = await jsRuntime.InvokeAsync<JsonElement>("Swal.fire", new
             {
-                product = await apicall.GetProduct();
-                _isInitialized = true; // Set the flag after initialization
+                title = "Are you sure?",
+                text = "This action cannot be undone!",
+                icon = "warning",
+                showCancelButton = true,
+                confirmButtonColor = "grey",
+                cancelButtonColor = "dark",
+                confirmButtonText = "Delete",
+                cancelButtonText = "Cancel"
+            });
+            Console.WriteLine(result);
+            // Check if the user confirmed the deletion
+            bool isConfirmed = result.GetProperty("isConfirmed").GetBoolean();
+            bool isDenied = result.GetProperty("isDenied").GetBoolean();
+            bool isDismissed = result.GetProperty("isDismissed").GetBoolean(); if (isConfirmed)
+            {
+                await DeleteProduct(productName);
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Error fetching products: {ex.Message}");
+                Console.WriteLine("User canceled the delete action.");
             }
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in ConfirmDeleteProduct: {ex.Message}");
+        }
     }
+
+    private async Task DeleteProduct(string productName)
+    {
+        // Add your logic to delete the product using the productName
+        // For instance, call the API to delete the product and refresh the product list afterward.
+        try
+        {
+            var response = await apicall.DeleteProduct(productName);
+            // Optionally, refresh the product list
+            if (response.ErrorCode == "00")
+            {
+                await jsRuntime.InvokeVoidAsync("Swal.fire", new
+                {
+                    title = "Success!",
+                    text = "Product Deleted successfully!",
+                    icon = "success",
+                    confirmButtonText = "OK"
+                });
+            }
+            else
+            {
+                await jsRuntime.InvokeVoidAsync("Swal.fire", new
+                {
+                    title = "Error!",
+                    text = response.ErrorMessage,
+                    icon = "error",
+                    confirmButtonText = "OK",
+                    confirmButtonColor = "dark",
+
+                });
+            }
+            navigationManager.NavigateTo("/Product", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting product: {ex.Message}");
+        }
+    }
+
 }

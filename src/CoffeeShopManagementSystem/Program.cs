@@ -15,6 +15,10 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<IHttpClientService, HttpClientService>();
 builder.Services.AddScoped<IApiCall, ApiCall>();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddServerSideBlazor().AddCircuitOptions(options =>
+{
+    options.DetailedErrors = true;
+});
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
     options =>
     {
