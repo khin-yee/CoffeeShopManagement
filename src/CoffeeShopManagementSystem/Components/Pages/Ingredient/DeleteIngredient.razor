@@ -5,11 +5,7 @@
 @inject NavigationManager navigationManager
 @inject IDialogService DialogService
 @rendermode InteractiveServer
-@* <h3>Delete Product</h3>
 
-<p>Are you sure you want to delete the product: <strong>@Name</strong>?</p>
-<button class="btn btn-dark">Delete</button>
- *@
 
 <MudCard Style="border: 1px solid black;">
     <MudCardHeader>
@@ -18,7 +14,6 @@
         </CardHeaderContent>
     </MudCardHeader>
     <MudCardContent>
-
         <MudText Typo="Typo.body2">Are you sure to delete Product : @Name</MudText>
     </MudCardContent>
     <MudCardActions>
@@ -33,7 +28,6 @@
 
     private async Task OnValidSubmit()
     {
-
         var response = await apicall.DeleteIngredient(Name);
         if (response.ErrorCode == "00")
         {

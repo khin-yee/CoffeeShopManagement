@@ -3,28 +3,72 @@
   "WorkspaceRootPath": "C:\\C#\\CoffeeShopManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem.domain\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|solutionrelative:src\\coffeeshopmanagementsystem.domain\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem.domain\\repo\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|solutionrelative:src\\coffeeshopmanagementsystem.domain\\repo\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\ingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\ingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\product\\deleteproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\product\\deleteproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\product\\adding.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\product\\adding.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\product\\deleteconfirmationdialog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\product\\deleteconfirmationdialog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\deleteingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\deleteingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\order\\deleteorder.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\order\\deleteorder.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\product\\deleteproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\product\\deleteproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\order\\order.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\order\\order.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\order\\ordercreate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\order\\ordercreate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\accountcontrol\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\accountcontrol\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\createingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\createingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\ingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\ingredient\\ingredient.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem.domain\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|solutionrelative:src\\coffeeshopmanagementsystem.domain\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem.domain\\repo\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F44B9D66-8E2D-4759-9CC9-C45F6D4C2A21}|src\\CoffeeShopManagementSystem.Domain\\CoffeeShopManagementSystem.Domain.csproj|solutionrelative:src\\coffeeshopmanagementsystem.domain\\repo\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\apicontrol\\iapicall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,14 +99,6 @@
       "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\order\\ordercreate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\order\\ordercreate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\order\\order.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\order\\order.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -73,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7755B507-DB88-44DB-A2BB-85D841397517}|src\\CoffeeShopManagementSystem.Api\\CoffeeShopManagementSystem.Api.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7755B507-DB88-44DB-A2BB-85D841397517}|src\\CoffeeShopManagementSystem.Api\\CoffeeShopManagementSystem.Api.csproj|solutionrelative:src\\coffeeshopmanagementsystem.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|c:\\c#\\coffeeshopmanagementsystem\\src\\coffeeshopmanagementsystem\\components\\pages\\order\\deleteorder.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2727EDFD-6C34-4004-B3BF-E631C1F3C832}|src\\CoffeeShopManagementSystem\\CoffeeShopManagementSystem.csproj|solutionrelative:src\\coffeeshopmanagementsystem\\components\\pages\\order\\deleteorder.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,71 +139,188 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaseRepo.cs",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Weather.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Weather.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Weather.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:39:47.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\_Imports.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\_Imports.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\_Imports.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:59:09.458Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:39:45.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApiCall.cs",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAmwFIAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:47:56.759Z",
+              "DocumentIndex": 3,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\App.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\App.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\App.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\App.razor",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:39:43.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwBMAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:46:37.926Z",
+              "DocumentIndex": 4,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Routes.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Routes.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Routes.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:39:40.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAgwDIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:45:46.59Z",
+              "DocumentIndex": 6,
+              "Title": "Adding.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Adding.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Adding.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Adding.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Adding.razor",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:39:29.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs*",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs*",
-              "ViewState": "AQIAADoAAAAAAAAAAAAUwD8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:43:36.6Z",
+              "Title": "Product.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor*",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor*",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T07:14:12.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeleteConfirmationDialog.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteConfirmationDialog.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteConfirmationDialog.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteConfirmationDialog.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteConfirmationDialog.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:38:56.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DeleteIngredient.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor*",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T08:49:54.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor*",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor*",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T07:14:22.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeleteProduct.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor*",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor*",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADQAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T07:35:22.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "OrderCreate.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T07:11:38.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\AccountControl\\Login.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\AccountControl\\Login.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\AccountControl\\Login.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\AccountControl\\Login.razor",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T04:38:18.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Ingredient.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor*",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor*",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAEwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T04:40:38.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DeleteOrder.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor*",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T07:11:17.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Layout\\MainLayout.razor",
@@ -179,38 +328,84 @@
               "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AQIAABgAAAAAAAAAAAAAACQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T08:23:27.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:23:27.813Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ingredient.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor*",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\Ingredient.razor*",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACwAAABNAAAA",
+              "DocumentIndex": 15,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Domain\\Repo\\Repository.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAA3wEoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:43:36.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Repo\\ProductService.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:45:46.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateIngredient.razor",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\CreateIngredient.razor",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\CreateIngredient.razor",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\CreateIngredient.razor",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\CreateIngredient.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T04:40:38.45Z",
+              "WhenOpened": "2024-10-24T03:39:55.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DeleteIngredient.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Ingredient\\DeleteIngredient.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T08:49:54.85Z",
-              "EditorCaption": ""
+              "DocumentIndex": 20,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Domain\\IService\\IProductService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwBMAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:46:37.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
+              "Title": "ApiCall.cs",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\ApiControl\\ApiCall.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAmwFIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:47:56.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BaseRepo.cs",
+              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
+              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
+              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
+              "RelativeToolTip": "src\\CoffeeShopManagementSystem.Domain\\Repo\\BaseRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:59:09.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IApiCall.cs",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\ApiControl\\IApiCall.cs",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\ApiControl\\IApiCall.cs",
@@ -218,12 +413,11 @@
               "RelativeToolTip": "src\\CoffeeShopManagementSystem\\ApiControl\\IApiCall.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAgwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:49:07.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:49:07.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Home.razor",
@@ -231,12 +425,11 @@
               "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Home.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T08:30:37.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:30:37.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "cf.png - PNG [512x512, 32 bit, PNG]",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\wwwroot\\Images\\cf.png",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\wwwroot\\Images\\cf.png",
@@ -248,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Api\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Api\\WeatherForecast.cs",
@@ -256,12 +449,11 @@
               "RelativeToolTip": "src\\CoffeeShopManagementSystem.Api\\WeatherForecast.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T08:21:08.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:21:08.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Layout\\NavMenu.razor",
@@ -269,25 +461,11 @@
               "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Layout\\NavMenu.razor",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAB2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T08:08:28.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:08:28.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DeleteProduct.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\DeleteProduct.razor",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAmwEIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T07:35:22.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "InventoryManagementController.cs",
               "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem.Api\\Controllers\\InventoryManagementController.cs",
               "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem.Api\\Controllers\\InventoryManagementController.cs",
@@ -295,60 +473,7 @@
               "RelativeToolTip": "src\\CoffeeShopManagementSystem.Api\\Controllers\\InventoryManagementController.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAIwDwAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T07:21:02.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OrderCreate.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\OrderCreate.razor",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAA4AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T07:11:38.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Order.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\Order.razor",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAABoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T07:14:22.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Product\\Product.razor",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACwAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T07:14:12.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DeleteOrder.razor",
-              "DocumentMoniker": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor",
-              "RelativeDocumentMoniker": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor",
-              "ToolTip": "C:\\C#\\CoffeeShopManagementSystem\\src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor",
-              "RelativeToolTip": "src\\CoffeeShopManagementSystem\\Components\\Pages\\Order\\DeleteOrder.razor",
-              "ViewState": "AQIAADIAAAAAAAAAAIAwwEAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-23T07:11:17.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T07:21:02.876Z"
             }
           ]
         }
