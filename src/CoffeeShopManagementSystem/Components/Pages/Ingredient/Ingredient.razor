@@ -2,8 +2,12 @@
 @using CoffeeShopManagementSystem.ApiControl
 @using CoffeeShopManagementSystem.Domain.Model
 @using CoffeeShopManagementSystem.Domain.Model.DTO
+@using System.Text.Json
 @inject NavigationManager Navigation
+@inject IJSRuntime jsRuntime
+@inject NavigationManager navigationManager
 @inject IApiCall apicall
+@rendermode InteractiveServer
 <style>
     .button-container {
         display: flex;
@@ -27,7 +31,7 @@
     </NavLink>
 
 </div>
-<MudDataGrid Items="@ingredient" Striped="true" Hover="true">
+@* <MudDataGrid Items="@ingredient" Striped="true" Hover="true">
     <Columns>
         <PropertyColumn Property="x => x.Name" Title="IngredientName" />
         <PropertyColumn Property="x => x.Quality" Title="Quality" />
@@ -55,9 +59,39 @@
         </TemplateColumn>
 
     </Columns>
-</MudDataGrid>
+</MudDataGrid> *@
+<MudTable @ref="@_table" Items="@ingredient" Dense="true" Striped="true" RowsPerPage="5" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+    <HeaderContent>
+        <MudTh>Name</MudTh>
+        <MudTh>Quality</MudTh>
+        <MudTh>Unit</MudTh>
+        <MudTh>Amount</MudTh>
+        <MudTh>Action</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Quality">@context.Quality</MudTd>
+        <MudTd DataLabel="Name">@context.Unit</MudTd>
+        <MudTd DataLabel="Position">@context.Amount</MudTd>
+        <MudTd DataLabel="Action">
+
+
+            <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete" OnClick="@(() => ConfirmDeleteIngredient(context.Name))" />
+
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <div style="display: flex; justify-content:safe center;">
+            <MudPagination SelectedChanged="PageChanged"
+                           Count="@((_table.GetFilteredItemsCount() + _table.RowsPerPage - 1) / _table.RowsPerPage)"
+                           Class="pa-4"
+                           Color="Color.Dark" />
+        </div>
+    </PagerContent>
+</MudTable>
 
 @code {
+    private MudTable<IngredientDTO> _table;
     private DateTime? _date = DateTime.Today;
     private List<IngredientDTO>? ingredient;
     private bool _isInitialized;
@@ -76,4 +110,84 @@
             }
         }
     }
+    private void PageChanged(int i)
+    {
+        _table.NavigateTo(i - 1);
+    }
+
+
+
+    private async Task ConfirmDeleteIngredient(string productName)
+    {
+        try
+        {
+            // Show confirmation dialog
+            var result = await jsRuntime.InvokeAsync<JsonElement>("Swal.fire", new
+            {
+                title = "Are you sure?",
+                text = "This action cannot be undone!",
+                icon = "warning",
+                showCancelButton = true,
+                confirmButtonColor = "grey",
+                cancelButtonColor = "dark",
+                confirmButtonText = "Delete",
+                cancelButtonText = "Cancel"
+            });
+            Console.WriteLine(result);
+            // Check if the user confirmed the deletion
+            bool isConfirmed = result.GetProperty("isConfirmed").GetBoolean();
+            bool isDenied = result.GetProperty("isDenied").GetBoolean();
+            bool isDismissed = result.GetProperty("isDismissed").GetBoolean(); if (isConfirmed)
+            {
+                await DeleteIngredient(productName);
+            }
+            else
+            {
+                Console.WriteLine("User canceled the delete action.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in ConfirmDeleteProduct: {ex.Message}");
+        }
+    }
+
+    private async Task DeleteIngredient(string Name)
+    {
+        // Add your logic to delete the product using the productName
+        // For instance, call the API to delete the product and refresh the product list afterward.
+        try
+        {
+            var response = await apicall.DeleteIngredient(Name);
+            // Optionally, refresh the product list
+            if (response.ErrorCode == "00")
+            {
+                await jsRuntime.InvokeVoidAsync("Swal.fire", new
+                {
+                    title = "Success!",
+                    text = "Ingredient Deleted successfully!",
+                    icon = "success",
+                    confirmButtonText = "OK"
+                });
+            }
+            else
+            {
+                await jsRuntime.InvokeVoidAsync("Swal.fire", new
+                {
+                    title = "Error!",
+                    text = response.ErrorMessage,
+                    icon = "error",
+                    confirmButtonText = "OK",
+                    confirmButtonColor = "dark",
+
+                });
+            }
+            navigationManager.NavigateTo("/Ingredient", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting product: {ex.Message}");
+        }
+    }
+
 }

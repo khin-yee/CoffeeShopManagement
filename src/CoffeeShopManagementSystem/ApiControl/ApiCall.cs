@@ -72,9 +72,9 @@ namespace CoffeeShopManagementSystem.ApiControl
         {
             var parameters = new List<KeyValuePair<string, string>>
             {
-                                    new KeyValuePair<string, string>("Name",name),
+                new KeyValuePair<string, string>("Name",name),
 
-                                };
+            };
 
             var encodedContent = new FormUrlEncodedContent(parameters);
 
