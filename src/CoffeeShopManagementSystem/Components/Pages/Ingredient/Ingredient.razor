@@ -21,7 +21,7 @@
         color: black;
     }
 </style>
-<h3>Menu Ingredients List</h3>
+<h3>Menu Ingredients List<img src="/Images/ig.png" alt="Order" width="30" height="30" style="margin-right: 10px;" /></h3>
 <div class="button-container">
     <NavLink class="btn btn-dark mx-2 filterbtnz" href="/CreateIngredient">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="black">
@@ -154,8 +154,6 @@
 
     private async Task DeleteIngredient(string Name)
     {
-        // Add your logic to delete the product using the productName
-        // For instance, call the API to delete the product and refresh the product list afterward.
         try
         {
             var response = await apicall.DeleteIngredient(Name);

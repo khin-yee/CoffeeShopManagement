@@ -116,11 +116,19 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             }
             return res;
         }
-        public Response CreateOrder(OrderDto orderdto)
+        private async  Task<int> GetAmount(string name,int qty)
+        {
+            var product =await _context.Product.FirstOrDefaultAsync(x => x.Name == name);
+            var price = product.Amount;
+            var res = price * qty;
+            return res;
+
+        }
+        public async Task<Response> CreateOrder(OrderDto orderdto)
         {
             Response res = new Response()
             {
-                ErrorCode = "00",
+                ErrorCode = "00", 
                 ErrorMessage = "Success"
             };
 
@@ -128,7 +136,8 @@ namespace CoffeeShopManagementSystem.Domain.Repo
             {
                 // Map the OrderDto to an Order entity
                 var order = _mapper.Map<Order>(orderdto);
-
+                var amount =await GetAmount(orderdto.ProductName, orderdto.Quality);
+                order.TotalAmount = amount;
                 // Find the product in the context using the product name
                 var product = _context.Product.FirstOrDefault(p => p.Name == orderdto.ProductName);
 

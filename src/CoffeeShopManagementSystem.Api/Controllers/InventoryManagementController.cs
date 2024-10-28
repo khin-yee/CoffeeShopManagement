@@ -39,14 +39,14 @@ namespace CoffeeShopManagementSystem.Api.Controllers
             return _service.DeleteProductByEmail(name);
         }
         [HttpPost("/AddOrder")]
-        public Response AddOrder(OrderDto order)
+        public Task<Response> AddOrder(OrderDto order)
         {
             return _service.CreateOrder(order);
         }
         [HttpGet("/Order")]
         public async Task<List<OrderDto>> GetOrder()
         {
-            return await _service.GetOrder();
+             return await _service.GetOrder();
         }
         [HttpGet("/Ingredient")]
         public async Task<List<IngredientDTO>> GetIngredient()

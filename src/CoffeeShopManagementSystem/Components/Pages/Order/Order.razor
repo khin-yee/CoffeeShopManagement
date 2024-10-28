@@ -22,7 +22,7 @@
         color: black;
     }
 </style>
-<h3>Order List</h3>
+<h3>Order List  <img src="/Images/cf.png" alt="Order" width="30" height="30" style="margin-right: 10px;" /></h3>
 <div class="button-container">
     <NavLink class="btn btn-dark mx-2 filterbtnz" href="/AddOrder">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="black">
@@ -62,6 +62,7 @@
         <MudTh>ProductName</MudTh>
         <MudTh>PhoneNumber</MudTh>
         <MudTh>Quality</MudTh>
+        <MudTh>Total Amount</MudTh>
         <MudTh>OrderDate</MudTh>
         <MudTh>CreatedAt</MudTh>
         <MudTh>Action</MudTh>
@@ -71,13 +72,11 @@
         <MudTd DataLabel="Quality">@context.ProductName</MudTd>
         <MudTd DataLabel="Name">@context.PhoneNumber</MudTd>
         <MudTd DataLabel="Position">@context.Quality</MudTd>
+        <MudTd DataLabel="Position">@context.TotalAmount</MudTd>
         <MudTd DataLabel="Position">@context.OrderDate</MudTd>
         <MudTd DataLabel="Position">@context.CreatedAt</MudTd>
         <MudTd DataLabel="Action">
-
-
             <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="delete" OnClick="@(() => ConfirmDeleteOrder(context.CustomerName,context.ProductName))"  />
-
         </MudTd>
     </RowTemplate>
     <PagerContent>

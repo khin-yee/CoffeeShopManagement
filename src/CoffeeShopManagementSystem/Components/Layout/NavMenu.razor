@@ -15,8 +15,8 @@
             </NavLink>
         </div>
 
-     
-           <AuthorizeView>
+
+        <AuthorizeView Roles="Adminstrator">
             <Authorized>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="Product">
@@ -25,8 +25,8 @@
                 </div>
             </Authorized>
         </AuthorizeView>
-         <AuthorizeView>
-            <Authorized>
+        <AuthorizeView Roles="Adminstrator,User">
+            <Authorized >
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="Order">
                               <img src="/Images/cf.png" alt="Order" width="30" height="30" style="margin-right: 10px;" />Order
@@ -34,7 +34,7 @@
                 </div>
             </Authorized>
         </AuthorizeView>
-        <AuthorizeView>
+        <AuthorizeView Roles="Adminstrator">
             <Authorized>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="Ingredient">
